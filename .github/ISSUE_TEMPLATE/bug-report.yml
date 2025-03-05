@@ -1,4 +1,4 @@
-name: "Bug Report"
+name: "🐞 Bug Report"
 description: "버그 또는 문제 상황 신고"
 labels: "bug"
 body:

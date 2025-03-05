@@ -1,4 +1,4 @@
-name: "Code Refactor"
+name: "🔨 Code Refactor"
 description: "코드 개선 및 최적화 요청"
 labels: "refactor"
 body:
