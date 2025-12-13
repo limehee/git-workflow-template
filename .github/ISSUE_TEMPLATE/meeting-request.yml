@@ -1,23 +1,35 @@
 name: "🙋‍♂️ Meeting Request"
-description: "팀 미팅 및 논의 요청"
-labels: "meeting"
+description: "팀 미팅이나 기술 논의를 요청합니다."
+labels: ["status: waiting-for-feedback"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 회의/논의 요청
+  - type: input
+    id: link
+    attributes:
+      label: "참고 자료 링크"
+      description: "회의 전 공유할 자료(Notion, Google Docs 등)가 있다면 링크를 남겨주세요."
+      placeholder: "https://..."
+    validations:
+      required: false
   - type: textarea
+    id: purpose
     attributes:
       label: "회의 주제 및 목적"
-      description: "회의에서 논의할 주제와 그 목적을 구체적으로 설명해 주세요."
-      placeholder: "예: 다음 분기 프로젝트 목표 및 역할 분담 논의"
+      description: "무엇을 위해 회의를 요청하는지 명확하게 기술해 주세요."
+      placeholder: "차세대 결제 모듈 아키텍처 설계 리뷰"
     validations:
       required: true
   - type: textarea
+    id: agenda
     attributes:
-      label: "논의할 주요 사항"
-      description: "회의에서 다룰 구체적인 항목이나 의제들을 나열해 주세요."
-      placeholder: "예: 일정 조율, 예산 배분, 기술적 문제 등"
+      label: "주요 논의 사항"
+      description: "논의할 구체적인 항목들을 나열해 주세요."
+      placeholder: |
+        1. PG사 연동 방식 결정 (Toss vs KakaoPay)
+        2. 결제 실패 시 재시도 전략 수립
+        3. DB 스키마 변경안 검토
     validations:
       required: true
-  - type: textarea
-    attributes:
-      label: "추가 참고자료"
-      description: "회의 전 공유할 자료나 참고 문서가 있다면 기입해 주세요."
-      placeholder: "예: 보고서, 슬라이드, 관련 링크 등"
